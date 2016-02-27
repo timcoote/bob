@@ -1,0 +1,4 @@
+this is a python interface to flandmark (I think that I may need a clandmark i/f). I worked with it on robot
+spin up a vnc session and then run python y.py and it identifies some of the landmarks on a picture of winona rider (?)
+
+I also cloned a more recent version of opencv to make it work. not tested whether it works with the rpm or not
