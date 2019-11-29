@@ -1,3 +1,13 @@
+2016-12-9: validated with python2 on f25. not bothering with python3 at this stage.
+need to run vncserver as user on robot (no automation of running this up).
+waitforkey requires the input focus to be the picture, or nothing happens.
+
+the pip install of bob.ip.flandmark did fail with missing stdlib.h, but code appears to mostly work
+
+after last image get a segfault.
+
+Some really good examples of how poor AI is.
+---
 this is a python interface to flandmark (I think that I may need a clandmark i/f). I worked with it on robot
 spin up a vnc session and then run python y.py and it identifies some of the landmarks on a picture of winona rider (?)
 
