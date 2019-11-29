@@ -31,17 +31,17 @@ localiser = Flandmark ()
 
 keypoints = localiser.locate (pic_grey, y, x, height, width)
 
-print keypoints
+print (keypoints)
 
 from matplotlib import pyplot
 from bob.ip.draw import box, cross, plus, line
 
 def show_diff (a, b):
-    print (a == b).all ()
+    print ((a == b).all ())
     if (a == b).all ():
-        print "arrays are the same"
+        print ("arrays are the same")
     else:
-        print (a - b).nonzero ()
+        print ((a - b).nonzero ())
         #print [i for i in prebox - pic]
 
 prebox = pic.copy ()
@@ -54,7 +54,7 @@ box (pic, (y, x), (height, width), (255, 0, 0))
 
 for k in keypoints [:-1]:
     cross (pic, k.astype (int), 5, (255,0,0))
-    print k.astype (int)
+    print (k.astype (int))
 
 show_diff (prebox, pic)
 
@@ -67,15 +67,15 @@ plus (pic, keypoints[-1:][0].astype (int), 6, (0,0, 255))
 
 preline = pic.copy ()
 cv2.line (pic, (0, 0), (1, 1), (255,0,0), 1)
-print "cv2 line"
+print ("cv2 line")
 show_diff (preline, pic)
 
 pic1 = preline.copy ()
 line (pic1, (0,0), (1,1), (255,0,0))
-print "bob"
+print ("bob")
 show_diff (preline, pic1)
 
-print "delta"
+print ("delta")
 show_diff (pic, pic1)
 
 
